@@ -1,0 +1,146 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.krona-one-regular {
+  font-family: "Krona One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+:root {
+	--index: calc(1vw + 1vh);
+	--transition: 1.5s cubic-bezier(.05, .5, 0, 1);
+}
+body {
+  text-align: center;
+}
+html {
+  background: url(https://raw.githubusercontent.com/aaaatamagotchi/page1/main/back/BG.png
+) no-repeat center center;
+  min-height: 100%;
+  background-size: cover;
+  font-family: "Krona One";
+  color: white;
+}
+
+.frens {
+  display:inline-block;
+  margin-top: 15.24vh;
+  font-size: 40px;
+}
+
+.text11 {
+  display: inline-block;
+  font-size: 20px;
+}
+
+.text22 {
+  display: inline-block;
+  font-size: 12px;
+  margin-top: 19px;
+}
+
+.ref-block {
+  display: block;
+  padding: 19px 26px 26px 26px;
+  max-width: 324px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.18);
+  margin-top: 6vh;
+}
+
+.link-block {
+  display: flex;
+  padding: 0px 17px 0px 17px;
+  align-items: center;
+  margin-top: 23px;
+  max-width: 276px;
+  height: 52px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #fff;
+  border-radius: 16px; 
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.link {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.imgg {
+  flex-basis: 25px;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: stretch;
+  align-items: center;
+  border: 1px solid #fff;
+  border-radius: 29px;
+  padding: 10px 0px;
+}
+
+.menu__home,
+.menu__tasks,
+.menu__skins,
+.menu__frens {
+  text-decoration: none;
+  color:#fff;
+}
+
+.menu__home--text,
+.menu__tasks--text,
+.menu__skins--text,
+.menu__frens--text {
+  font-size: 12px;
+}
+
+.menu__home {opacity: 0.48; transition: 0.64s}
+.menu__home:hover {opacity: 0.90; transition: 0.32s}
+.menu__skins {opacity: 0.48; transition: 0.64s}
+.menu__skins:hover {opacity: 0.90; transition: 0.32s}
+.menu__frens {opacity: 0.48; transition: 0.64s}
+.menu__frens:hover {opacity: 0.90; transition: 0.32s}
+.menu__tasks {opacity: 0.48; transition: 0.64s}
+.menu__tasks:hover {opacity: 0.90; transition: 0.32s}
+
+.menu { 
+  position: fixed;  
+  bottom: 4.84%;  
+  right: 5.12%; 
+  left: 5.12%;
+}
+
+@media (max-width: 350px) {
+  .text1 {
+    font-size: 15px;
+  }
+
+  .text2 {
+    display: inline-block;
+    font-size: 9px;
+  }
+
+  .menu__home--text,
+  .menu__tasks--text,
+  .menu__skins--text,
+  .menu__frens--text {
+    font-size: 8px;
+  }
+  
+  .ref-block {
+    max-width: 200px;
+  }
+
+  .link-block {
+    height: 45px;
+  }
+}
