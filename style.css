@@ -1,0 +1,247 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.krona-one-regular {
+  font-family: "Krona One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+:root {
+	--index: calc(1vw + 1vh);
+	--transition: 1.5s cubic-bezier(.05, .5, 0, 1);
+}
+body {
+  text-align: center;
+}
+html {
+  background: url(https://raw.githubusercontent.com/aaaatamagotchi/page1/main/back/BG.png
+) no-repeat center center;
+  min-height: 100%;
+  background-size: cover;
+  font-family: "Krona One";
+  color: white;
+}
+
+.head {
+  position: fixed;
+  top: 4.84%;  
+  right: 5.12%; 
+  left: 5.12%;
+}
+
+.img1 {
+  position: absolute;
+  left: 0.69%;
+  top: -5px;
+}
+
+.balance {
+  position: absolute;
+  right: 10px;
+  display: inline;
+  font-size: 16px;
+  right: 5.12%; 
+  left: 5.12%;
+}
+
+.score {
+  position: absolute;
+  display: inline;
+  font-size: 34px;
+  right: 5.12%; 
+  left: 5.12%;
+}
+
+.playlist {
+  border: 1px solid #fff;
+  border-radius: 18px;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.22);
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 90% 10%;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 19.63%;
+  right: 5.12%; 
+  left: 5.12%;
+}
+
+.playlist__rn {
+  text-align: left;
+  font-size: 11px;
+}
+
+.playlist__img2 {
+  text-align: right;
+}
+.menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: stretch;
+  align-items: center;
+  border: 1px solid #fff;
+  border-radius: 29px;
+  padding: 10px 0px;
+}
+
+.menu__home,
+.menu__tasks,
+.menu__skins,
+.menu__frens {
+  text-decoration: none;
+  color:#fff;
+}
+
+.menu__home--text,
+.menu__tasks--text,
+.menu__skins--text,
+.menu__frens--text {
+  font-size: 12px;
+}
+
+.coin {
+  margin-top: 60px;
+  margin-bottom: 45px;
+  position: fixed;
+  top: 25%;
+  right: 5.12%; 
+  left: 5.12%;
+  z-index: 0
+}
+
+#progress-bar {
+  border-radius: 19px;
+  max-width: 358px;
+  width: 90%;
+  height: 13px;
+  background: linear-gradient(to right, #e84601, #8b2a00, #320d00);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+
+.coin__energy--zero {
+  display: inline-block;
+  width: 45%;
+  max-width: 178px;
+  font-size: 16px;
+  text-align: left;
+  margin-top: 5px;
+}
+
+.coin__energy--full {
+  display: inline-block;
+  width: 45%;
+  max-width: 178px;
+  font-size: 16px;
+  text-align: right;
+  margin-top: 5px;
+}
+
+.button:hover {transform: scale(1.08); transition: 0.32s;}
+.menu__home {opacity: 0.48; transition: 0.64s}
+.menu__home:hover {opacity: 0.90; transition: 0.32s}
+.menu__skins {opacity: 0.48; transition: 0.64s}
+.menu__skins:hover {opacity: 0.90; transition: 0.32s}
+.menu__frens {opacity: 0.48; transition: 0.64s}
+.menu__frens:hover {opacity: 0.90; transition: 0.32s}
+.menu__tasks {opacity: 0.48; transition: 0.64s}
+.menu__tasks:hover {opacity: 0.90; transition: 0.32s}
+.svg__button:hover {transform: scale(1.03); transition: 0.32s;}
+.svg__button {transform: scale(1.00); transition: 0.32s;}
+.coin__energy {margin-left: 0px;
+margin-right: 0px;}
+
+.svg__button {
+  transition: 0.52s;
+}
+
+.playlist {
+  opacity: 0; 
+  transition: opacity 2s ease-in-out; 
+  display: grid; 
+}
+
+.menu { 
+  position: fixed;  
+  bottom: 4.84%;  
+  right: 5.12%; 
+  left: 5.12%;
+}
+
+.number {
+  position: absolute;
+  font-size: 30px;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.5) translateY(0);
+  transition: opacity 0.5s, transform 0.5s;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.number.visible {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1) translateY(-30px); /* Move up */
+}
+
+@media (max-width: 400px) {
+  .svg__button {
+    width: 300px;
+    height: 307px;
+  }
+}
+
+@media (max-width: 350px) {
+  .svg__button {
+    width: 275px;
+    height: 282px;
+  }
+
+  .menu__home--text,
+  .menu__tasks--text,
+  .menu__skins--text,
+  .menu__frens--text {
+    font-size: 8px;
+  }
+
+  .balance {
+    font-size: 12px;
+  }
+
+  .score {
+    font-size: 25px;
+  }
+
+  .playlist__rn {
+    font-size: 8px;
+  }
+
+  .svg__note {
+    width: 17px;
+    height: 20px;
+  }
+
+  .coin__energy--zero, .coin__energy--full {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 325px) {
+  .svg__button {
+    width: 250px;
+    height: 257px;
+  }
+}
+
+@media (max-width: 300px) {
+  .svg__button {
+    width: 225px;
+    height: 232px;
+  }
+}
