@@ -1,0 +1,221 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.krona-one-regular {
+  font-family: "Krona One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+:root {
+	--index: calc(1vw + 1vh);
+	--transition: 1.5s cubic-bezier(.05, .5, 0, 1);
+}
+body {
+  text-align: center;
+}
+html {
+  background: url(https://raw.githubusercontent.com/aaaatamagotchi/page1/main/back/BG.png
+) no-repeat center center;
+  min-height: 100%;
+  background-size: cover;
+  font-family: "Krona One";
+  color: white;
+}
+
+.popup {
+  position: fixed;
+  padding: 23px 34px 50px 35px;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  width: 386px;
+  height: 527px;
+  backdrop-filter: blur(6.900000095367432px);
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.popup__text1 {
+  font-size: 20px;
+  margin-bottom: 23px;
+  text-align: center;
+}
+
+.popup__svg1 {
+  margin-bottom: 14px;
+}
+
+.popup__text2 {
+  font-size: 15px;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.popup__button1 {
+  display: inline-flex;
+  align-items: center;
+  padding: 0px 15px;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  width: 246px;
+  height: 46px;
+  background: rgba(0, 0, 0, 0.81);
+  margin-bottom: 26px;
+}
+
+.popup__button1--text {
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.popup__button1--svg {
+  flex-basis: 29px;
+}
+
+.popup__text3 {
+  font-size: 15px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 18px;
+}
+
+.popup__text4 {
+  font-weight: 400;
+  font-size: 15px;
+  color: #fff;
+  text-align: left;
+  margin-left: 35px;
+  margin-bottom: 26px;
+}
+
+.popup__button2 {
+  display: inline-block;
+  padding: 18px 0px;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  width: 316px;
+  height: 76px;
+  background: rgba(0, 0, 0, 0.81);
+}
+
+.popup__button2--text {
+  font-size: 32px;
+  color: #fff;
+  text-align: center;
+}
+
+.Tasks {
+  display: inline;
+  position: fixed;
+  font-size: 40px;
+  bottom: 79.4%;
+  top: 15.24% ; 
+  left: 29.77% ;
+  right: 29.77% ;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: stretch;
+  align-items: center;
+  border: 1px solid #fff;
+  border-radius: 29px;
+  padding: 10px 0px;
+}
+
+.menu__home,
+.menu__tasks,
+.menu__skins,
+.menu__frens {
+  text-decoration: none;
+  color:#fff;
+}
+
+.menu__home--text,
+.menu__tasks--text,
+.menu__skins--text,
+.menu__frens--text {
+  font-size: 12px;
+}
+
+
+.button:hover {transform: scale(1.08); transition: 0.32s;}
+.menu__home {opacity: 0.48; transition: 0.64s}
+.menu__home:hover {opacity: 0.90; transition: 0.32s}
+.menu__skins {opacity: 0.48; transition: 0.64s}
+.menu__skins:hover {opacity: 0.90; transition: 0.32s}
+.menu__frens {opacity: 0.48; transition: 0.64s}
+.menu__frens:hover {opacity: 0.90; transition: 0.32s}
+.menu__tasks {opacity: 0.48; transition: 0.64s}
+.menu__tasks:hover {opacity: 0.90; transition: 0.32s}
+.svg__button:hover {transform: scale(1.03); transition: 0.32s;}
+.svg__button {transform: scale(1.00); transition: 0.32s;}
+.coin__energy {margin-left: 0px;
+margin-right: 0px;}
+.playlist {
+  opacity: 0; 
+  transition: opacity 2s ease-in-out; 
+  display: block; 
+}
+.menu { position: fixed;  bottom: 4.84%;  right: 5.12%; left: 5.12%;}
+.tasks__task { 
+    width: 75.35%; 
+    height: 8.37vh;
+    position: fixed;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.18);
+    left: 12.33% ;
+    bottom: 68.03% ;
+    top: 23.61% ;
+    right: 12.33%  ;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: left; 
+    justify-content: flex-start;
+    padding: 10px; 
+}
+  
+.tasks__task--name {
+    position: absolute;
+}
+
+.tasks__task--reward2 {
+    display: block;
+    font-size: 11px;}
+
+.tasks__task--rewards {
+    left: 12% ;
+    top: 45%;
+    text-align: left;
+    position: absolute;
+}
+  
+.tasks__task--name { 
+    display: block;
+    font-size: 16px;
+    position: absolute;
+    top: 10%;
+    left: 6%;}
+  
+.tasks__task--reward1 {
+    display: block;
+    font-size: 11px;}
+
+.tasks__task a {
+      display: block;
+      position:absolute;
+      top: 40%;
+      left: 85%;
+}
+
+.tasks__task a svg {opacity: 0.48; transition: 0.64s}
+.tasks__task a svg:hover {opacity: 0.90; transition: 0.32s}
+
