@@ -57,44 +57,7 @@
           });
         });
       </script>
-      <!-- <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            let balance = 0;
-            let clicks = 0;
-            const maxClicks = 1000;
-            const coinButton = document.getElementById('coinButton');
-
-            coinButton.addEventListener('click', (event) => {
-                if (clicks < maxClicks) {
-                    balance++;
-                    clicks++;
-                    document.getElementById('balance').innerHTML = balance + ' $MUSIX';
-
-                    const numberElement = document.createElement('p');
-                    numberElement.textContent = '+1';
-                    numberElement.className = 'number';
-                    numberElement.style.left = `${event.clientX}px`;
-                    numberElement.style.top = `${event.clientY}px`;
-
-                    document.body.appendChild(numberElement);
-                    
-                    // Trigger animation
-                    setTimeout(() => {
-                        numberElement.classList.add('visible');
-                    }, 10);
-
-                    // Remove element after animation
-                    setTimeout(() => {
-                        numberElement.classList.remove('visible');
-                        setTimeout(() => {
-                            numberElement.remove();
-                        }, 250);
-                    }, 750);
-                }
-            });
-        });
-    </script> -->
-    <script>
+    <!-- <script>
         document.addEventListener('DOMContentLoaded', () => {
             let balance = 0;
             let clicks = 1000;
@@ -149,6 +112,74 @@
 
                     updateProgressBar();
                 }
+            });
+
+            updateProgressBar();
+        });
+    </script> -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let balance = 0;
+            let clicks = 1000;
+            const maxClicks = 1000;
+            const coinButton = document.getElementById('coinButton');
+            const progressBar = document.getElementById('progress-bar');
+            let clickQueue = 0;
+
+            // Функция обновления индикатора прогресса
+            const updateProgressBar = () => {
+                const progressPercentage = (clicks / maxClicks) * 100;
+
+                // Обновление градиента на основе прогресса
+                const gradientColor = `linear-gradient(to right, #e84601 ${progressPercentage}%, #8b2a00 ${progressPercentage-10}%, #320d00)`;
+                progressBar.style.background = gradientColor;
+            };
+
+            // Восстанавливать клики каждую минуту
+            setInterval(() => {
+                if (clicks < maxClicks) {
+                    clicks++;
+                    updateProgressBar();
+                }
+            }, 60000); // 60000 миллисекунд = 1 минута
+
+            // Обработчик кликов по кнопке с использованием requestAnimationFrame
+            coinButton.addEventListener('click', (event) => {
+                clickQueue++;
+
+                // Используем requestAnimationFrame для обработки клика
+                requestAnimationFrame(() => {
+                    if (clicks > 0 && clickQueue > 0) {
+                        balance++;
+                        clicks--;
+                        clickQueue--;
+
+                        document.getElementById('balance').innerHTML = balance + ' $MUSIX';
+
+                        const numberElement = document.createElement('p');
+                        numberElement.textContent = '+1';
+                        numberElement.className = 'number';
+                        numberElement.style.left = `${event.clientX}px`;
+                        numberElement.style.top = `${event.clientY}px`;
+
+                        document.body.appendChild(numberElement);
+
+                        // Trigger animation
+                        setTimeout(() => {
+                            numberElement.classList.add('visible');
+                        }, 10);
+
+                        // Remove element after animation
+                        setTimeout(() => {
+                            numberElement.classList.remove('visible');
+                            setTimeout(() => {
+                                numberElement.remove();
+                            }, 500);
+                        }, 1000);
+
+                        updateProgressBar();
+                    }
+                });
             });
 
             updateProgressBar();
